@@ -23,76 +23,40 @@ Three new preventative aides drugs were tested in clinical trials in 2015. The t
 
 We will subset the data by sex to see if the drug is sex specific.
 
-## Plots
-First we will plot the effectiveness of the drug while highlighting the difference of genders. 
+##AIDs Results (Male)
 
 ```{r}
-
+ScarolinaM <- filter(Scarolina, sex=="M")
+barchartGC(~infected + group, data = ScarolinaM, type="percent")
 ```
+Given the barchart, it seems males who recieved the drug aquired AIDs (around 67%) than maleswho recieved the placebo (around 50%). 
 
-
-## Numerical
+##AIDs Results (Females)
 
 ```{r}
-
+ScarolinaF <- filter(Scarolina, sex=="M")
+barchartGC(~infected + group, data = ScarolinaF, type="percent")
 ```
+Given the Barchart, it seems females who recieved the drug aquired AIDs (around 67%) than females who recieved the placebo (around 50%).
 
-
-## Inferential
+##AIDs Results (Both)
 
 ```{r}
-
+barchartGC(~infected + group, data=Scarolina, type = "percent")
 ```
-
+Given the barchart, those who conteracted AIDs and were given the placebo was only slightly more (i.e the difference of about 2%) than those who contracted AIDs and were given the drug.
 
 # Central Africa
 
 We will subset the data by sex to see if the drug is sex specific.
-
-## Plots
-
-```{r}
-
-```
-
-## Numerical
-
-```{r}
-
-```
-
-## Inferential
-
-```{r}
-
-```
 
 
 # Korea
 
 We will subset the data by sex to see if the drug is sex specific.
 
-## Plots
 
-```{r}
-
-```
-
-
-## Numerical
-
-```{r}
-
-```
-
-
-## Inferential
-
-```{r}
-
-```
-
-# Conclusion 
+# Inferential Conclusion 
 
 
 
