@@ -29,7 +29,7 @@ We will subset the data by sex to see if the drug is sex specific.
 ScarolinaM <- filter(Scarolina, sex=="M")
 barchartGC(~infected + group, data = ScarolinaM, type="percent")
 ```
-Given the barchart, it seems males who recieved the drug aquired AIDs (around 67%) than maleswho recieved the placebo (around 50%). 
+Given the barchart, it seems more males who recieved the drug aquired AIDs (around 67%) than maleswho recieved the placebo (around 50%). 
 
 ##AIDs Results (Females)
 
@@ -37,7 +37,7 @@ Given the barchart, it seems males who recieved the drug aquired AIDs (around 67
 ScarolinaF <- filter(Scarolina, sex=="M")
 barchartGC(~infected + group, data = ScarolinaF, type="percent")
 ```
-Given the Barchart, it seems females who recieved the drug aquired AIDs (around 67%) than females who recieved the placebo (around 50%).
+Given the Barchart, it seems more females who recieved the drug aquired AIDs (around 67%) than females who recieved the placebo (around 50%).
 
 ##AIDs Results (Both)
 
@@ -50,11 +50,55 @@ Given the barchart, those who conteracted AIDs and were given the placebo was on
 
 We will subset the data by sex to see if the drug is sex specific.
 
+##AIDs Results (Male)
+
+```{r}
+CentralAfricaM <- filter(cenAfrica, sex=="M")
+barchartGC(~infected + group, data = CentralAfricaM, type="percent")
+```
+Given the barchart, it seems more males who recieved the palcebo aquired AIDs (around 50%) than males who recieved the drug (around 49%). 
+
+##AIDs Results (Females)
+
+```{r}
+CentralAfricaF <- filter(cenAfrica, sex=="F")
+barchartGC(~infected + group, data = CentralAfricaF, type="percent")
+```
+Given the Barchart, it seems more females who recieved the placebo aquired AIDs (around 55%) than females who recieved the drug (around 45%).
+
+##AIDs Results (Both)
+
+```{r}
+barchartGC(~infected + group, data=cenAfrica, type = "percent")
+```
+Given the barchart, those who conteracted AIDs and were given the placebo (around 52%) was more than those who contracted AIDs and were given the drug (around 46%).
 
 # Korea
 
 We will subset the data by sex to see if the drug is sex specific.
 
+##AIDs Results (Male)
+
+```{r}
+KoreaM <- filter(korea, sex=="M")
+barchartGC(~infected + group, data = KoreaM, type="percent")
+```
+Given the barchart, it seems more males who recieved the palcebo aquired AIDs (over 60%) than males who recieved the drug (around 30%). 
+
+##AIDs Results (Females)
+
+```{r}
+KoreaF <- filter(korea, sex=="F")
+barchartGC(~infected + group, data = KoreaF, type="percent")
+```
+Given the Barchart, it seems more females who recieved the drug aquired AIDs (over 60%) than females who recieved the placebo (under 40%).
+
+##AIDs Results (Both)
+
+```{r}
+barchartGC(~infected + group, data=korea, type = "percent")
+```
+Given the barchart, the percentage of poeple who conteracted AIDs and were given the placebo (over 50%) were greater than those who contracted AIDs and were given the drug (around 44%).
 
 # Inferential Conclusion 
 
