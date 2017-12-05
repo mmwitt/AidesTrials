@@ -18,7 +18,7 @@ cenAfrica<-read.csv(file="central_africa_aides.csv",header=TRUE)
 
 Three new preventative aides drugs were tested in clinical trials in 2015. The trial designs were modeled after the famous RV_144 Aides Trials in Tailand in 2009. Our reasearch question: Does sex of the participant seem to be a factor for any of the drugs?
 
-
+#Graphical Analysis 
 # South Carolina
 
 We will subset the data by sex to see if the drug is sex specific.
@@ -99,6 +99,86 @@ Given the Barchart, it seems more females who recieved the drug aquired AIDs (ov
 barchartGC(~infected + group, data=korea, type = "percent")
 ```
 Given the barchart, the percentage of poeple who conteracted AIDs and were given the placebo (over 50%) were greater than those who contracted AIDs and were given the drug (around 44%).
+
+#Numerical Results
+# South Carolina 
+
+##Males
+
+```{r}
+ScarolinaM_Table <- xtabs(~infected + group, data = ScarolinaM)
+rowPerc(ScarolinaM_Table)
+```
+More males (57.35%) that were infected with aids recieved the actual drug, than males wo recieved the placebo. 
+
+##Females
+
+```{r}
+ScarolinaF_Table <- xtabs(~infected + group, data = ScarolinaF)
+rowPerc(ScarolinaF_Table)
+```
+More females (57.35%) contracted AIDs after being administered the drug. 
+
+##Both
+
+```{r}
+Scarolina_Table <- xtabs(~infected + group, data = Scarolina)
+rowPerc(Scarolina_Table)
+```
+Overall most who recieved the drug did not contract AIDs, but the diffeence was only by 0.04%. 
+
+#Central Africa
+
+##Males
+
+```{r}
+ScarolinaM_Table <- xtabs(~infected + group, data = ScarolinaM)
+rowPerc(ScarolinaM_Table)
+```
+More males (57.35%) that were infected with aids recieved the actual drug, than males wo recieved the placebo. 
+
+##Females
+
+```{r}
+ScarolinaF_Table <- xtabs(~infected + group, data = ScarolinaF)
+rowPerc(ScarolinaF_Table)
+```
+More females (57.35%) contracted AIDs after being administered the drug. 
+
+##Both
+
+```{r}
+Scarolina_Table <- xtabs(~infected + group, data = Scarolina)
+rowPerc(Scarolina_Table)
+```
+Overall most who recieved the drug did not contract AIDs, but the diffeence was only by 0.04%. 
+
+
+#Korea
+
+##Males
+
+```{r}
+ScarolinaM_Table <- xtabs(~infected + group, data = ScarolinaM)
+rowPerc(ScarolinaM_Table)
+```
+More males (57.35%) that were infected with aids recieved the actual drug, than males wo recieved the placebo. 
+
+##Females
+
+```{r}
+ScarolinaF_Table <- xtabs(~infected + group, data = ScarolinaF)
+rowPerc(ScarolinaF_Table)
+```
+More females (57.35%) contracted AIDs after being administered the drug. 
+
+##Both
+
+```{r}
+Scarolina_Table <- xtabs(~infected + group, data = Scarolina)
+rowPerc(Scarolina_Table)
+```
+Overall most who recieved the drug did not contract AIDs, but the diffeence was only by 0.04%. 
 
 # Inferential Conclusion 
 
