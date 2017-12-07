@@ -207,7 +207,7 @@ rowPerc(ScarolinaM_Table)</code></pre>
 ## infected   drug placebo  Total
 ##     aids  57.35   42.65 100.00
 ##     none  49.52   50.48 100.00</code></pre>
-<p>More males (57.35%) that were infected with aids recieved the actual drug, than males wo recieved the placebo.</p>
+<p>More males (57.35%) that were infected with aids recieved the actual drug, than males who recieved the placebo.</p>
 </div>
 <div id="females" class="section level2">
 <h2>Females</h2>
@@ -227,73 +227,73 @@ rowPerc(Scarolina_Table)</code></pre>
 ## infected   drug placebo  Total
 ##     aids  49.37   50.63 100.00
 ##     none  50.04   49.96 100.00</code></pre>
-<p>Overall most who recieved the drug did not contract AIDs, but the diffeence was only by 0.04%.</p>
+<p>Overall 50.04% of those who did not contracted AIDs where given the real drug, while 49.37% of those who caught AIDs where given the drug.</p>
 </div>
 </div>
 <div id="central-africa-1" class="section level1">
 <h1>Central Africa</h1>
 <div id="males-1" class="section level2">
 <h2>Males</h2>
-<pre class="r"><code>ScarolinaM_Table &lt;- xtabs(~infected + group, data = ScarolinaM)
-rowPerc(ScarolinaM_Table)</code></pre>
+<pre class="r"><code>CentralAfricaM_Table &lt;- xtabs(~infected + group, data = CentralAfricaM)
+rowPerc(CentralAfricaM_Table)</code></pre>
 <pre><code>##         group
 ## infected   drug placebo  Total
-##     aids  57.35   42.65 100.00
-##     none  49.52   50.48 100.00</code></pre>
-<p>More males (57.35%) that were infected with aids recieved the actual drug, than males wo recieved the placebo.</p>
+##     aids  49.47   50.53 100.00
+##     none  50.02   49.98 100.00</code></pre>
+<p>More males (50.53%) that were infected with aids recieved the placebo, than males who recieved the drug (49.47%).</p>
 </div>
 <div id="females-1" class="section level2">
 <h2>Females</h2>
-<pre class="r"><code>ScarolinaF_Table &lt;- xtabs(~infected + group, data = ScarolinaF)
-rowPerc(ScarolinaF_Table)</code></pre>
+<pre class="r"><code>CentralAfricaF_Table &lt;- xtabs(~infected + group, data = CentralAfricaF)
+rowPerc(CentralAfricaF_Table)</code></pre>
 <pre><code>##         group
 ## infected   drug placebo  Total
-##     aids  57.35   42.65 100.00
-##     none  49.52   50.48 100.00</code></pre>
-<p>More females (57.35%) contracted AIDs after being administered the drug.</p>
+##     aids  46.55   53.45 100.00
+##     none  50.17   49.83 100.00</code></pre>
+<p>More females (53.45%) contracted AIDs after being administered the placebo. Of the women administered the actual drug 50.17% did not contract AIDs.</p>
 </div>
 <div id="both-1" class="section level2">
 <h2>Both</h2>
-<pre class="r"><code>Scarolina_Table &lt;- xtabs(~infected + group, data = Scarolina)
-rowPerc(Scarolina_Table)</code></pre>
+<pre class="r"><code>CentralAfrica_Table &lt;- xtabs(~infected + group, data = cenAfrica)
+rowPerc(CentralAfrica_Table)</code></pre>
 <pre><code>##         group
 ## infected   drug placebo  Total
-##     aids  49.37   50.63 100.00
-##     none  50.04   49.96 100.00</code></pre>
-<p>Overall most who recieved the drug did not contract AIDs, but the diffeence was only by 0.04%.</p>
+##     aids  47.87   52.13 100.00
+##     none  50.10   49.90 100.00</code></pre>
+<p>Overall about 50% (50.10% to be exact) who recieved the drug did not contract AIDs, but of those who were administered the placebo 49.90% remained free of AIDs.</p>
 </div>
 </div>
 <div id="korea-1" class="section level1">
 <h1>Korea</h1>
 <div id="males-2" class="section level2">
 <h2>Males</h2>
-<pre class="r"><code>ScarolinaM_Table &lt;- xtabs(~infected + group, data = ScarolinaM)
-rowPerc(ScarolinaM_Table)</code></pre>
+<pre class="r"><code>KoreaM_Table &lt;- xtabs(~infected + group, data = KoreaM)
+rowPerc(KoreaM_Table)</code></pre>
 <pre><code>##         group
 ## infected   drug placebo  Total
-##     aids  57.35   42.65 100.00
-##     none  49.52   50.48 100.00</code></pre>
-<p>More males (57.35%) that were infected with aids recieved the actual drug, than males wo recieved the placebo.</p>
+##     aids  32.68   67.32 100.00
+##     none  51.25   48.75 100.00</code></pre>
+<p>Only 32.68% of those that were infected with aids recieved the actual drug, which is far less than those recieved the placebo (67.32%).</p>
 </div>
 <div id="females-2" class="section level2">
 <h2>Females</h2>
-<pre class="r"><code>ScarolinaF_Table &lt;- xtabs(~infected + group, data = ScarolinaF)
-rowPerc(ScarolinaF_Table)</code></pre>
+<pre class="r"><code>KoreaF_Table &lt;- xtabs(~infected + group, data = KoreaF)
+rowPerc(KoreaF_Table)</code></pre>
 <pre><code>##         group
 ## infected   drug placebo  Total
-##     aids  57.35   42.65 100.00
-##     none  49.52   50.48 100.00</code></pre>
-<p>More females (57.35%) contracted AIDs after being administered the drug.</p>
+##     aids  65.43   34.57 100.00
+##     none  49.43   50.57 100.00</code></pre>
+<p>More females (65.43%) contracted AIDs after being administered the drug. Only 34.57% of women on the placebo contracted AIDs.</p>
 </div>
 <div id="both-2" class="section level2">
 <h2>Both</h2>
-<pre class="r"><code>Scarolina_Table &lt;- xtabs(~infected + group, data = Scarolina)
-rowPerc(Scarolina_Table)</code></pre>
+<pre class="r"><code>Korea_Table &lt;- xtabs(~infected + group, data = korea)
+rowPerc(Korea_Table)</code></pre>
 <pre><code>##         group
 ## infected   drug placebo  Total
-##     aids  49.37   50.63 100.00
-##     none  50.04   49.96 100.00</code></pre>
-<p>Overall most who recieved the drug did not contract AIDs, but the diffeence was only by 0.04%.</p>
+##     aids  44.02   55.98 100.00
+##     none  50.33   49.67 100.00</code></pre>
+<p>Overall most who recieved the drug did not contract AIDs (50.33%).</p>
 </div>
 </div>
 <div id="inferential-conclusion" class="section level1">

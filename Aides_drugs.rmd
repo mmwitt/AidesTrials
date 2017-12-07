@@ -109,7 +109,7 @@ Given the barchart, the percentage of poeple who conteracted AIDs and were given
 ScarolinaM_Table <- xtabs(~infected + group, data = ScarolinaM)
 rowPerc(ScarolinaM_Table)
 ```
-More males (57.35%) that were infected with aids recieved the actual drug, than males wo recieved the placebo. 
+More males (57.35%) that were infected with aids recieved the actual drug, than males who recieved the placebo. 
 
 ##Females
 
@@ -125,60 +125,60 @@ More females (57.35%) contracted AIDs after being administered the drug.
 Scarolina_Table <- xtabs(~infected + group, data = Scarolina)
 rowPerc(Scarolina_Table)
 ```
-Overall most who recieved the drug did not contract AIDs, but the diffeence was only by 0.04%. 
+Overall 50.04% of those who did not contracted AIDs where given the real drug, while 49.37% of those who caught AIDs where given the drug.
 
 #Central Africa
 
 ##Males
 
 ```{r}
-ScarolinaM_Table <- xtabs(~infected + group, data = ScarolinaM)
-rowPerc(ScarolinaM_Table)
+CentralAfricaM_Table <- xtabs(~infected + group, data = CentralAfricaM)
+rowPerc(CentralAfricaM_Table)
 ```
-More males (57.35%) that were infected with aids recieved the actual drug, than males wo recieved the placebo. 
+More males (50.53%) that were infected with aids recieved the placebo, than males who recieved the drug (49.47%). 
 
 ##Females
 
 ```{r}
-ScarolinaF_Table <- xtabs(~infected + group, data = ScarolinaF)
-rowPerc(ScarolinaF_Table)
+CentralAfricaF_Table <- xtabs(~infected + group, data = CentralAfricaF)
+rowPerc(CentralAfricaF_Table)
 ```
-More females (57.35%) contracted AIDs after being administered the drug. 
+More females (53.45%) contracted AIDs after being administered the placebo. Of the women administered the actual drug 50.17% did not contract AIDs. 
 
 ##Both
 
 ```{r}
-Scarolina_Table <- xtabs(~infected + group, data = Scarolina)
-rowPerc(Scarolina_Table)
+CentralAfrica_Table <- xtabs(~infected + group, data = cenAfrica)
+rowPerc(CentralAfrica_Table)
 ```
-Overall most who recieved the drug did not contract AIDs, but the diffeence was only by 0.04%. 
-
+Overall about 50% (50.10% to be exact) who recieved the drug did not contract AIDs, but of those who were administered the placebo 49.90% remained free of AIDs. 
 
 #Korea
 
 ##Males
 
 ```{r}
-ScarolinaM_Table <- xtabs(~infected + group, data = ScarolinaM)
-rowPerc(ScarolinaM_Table)
+KoreaM_Table <- xtabs(~infected + group, data = KoreaM)
+rowPerc(KoreaM_Table)
 ```
-More males (57.35%) that were infected with aids recieved the actual drug, than males wo recieved the placebo. 
+Only 32.68% of those that were infected with aids recieved the actual drug, which is far less than those recieved the placebo (67.32%). 
 
 ##Females
 
 ```{r}
-ScarolinaF_Table <- xtabs(~infected + group, data = ScarolinaF)
-rowPerc(ScarolinaF_Table)
+KoreaF_Table <- xtabs(~infected + group, data = KoreaF)
+rowPerc(KoreaF_Table)
 ```
-More females (57.35%) contracted AIDs after being administered the drug. 
+More females (65.43%) contracted AIDs after being administered the drug. Only 34.57% of women on the placebo contracted AIDs. 
 
 ##Both
 
 ```{r}
-Scarolina_Table <- xtabs(~infected + group, data = Scarolina)
-rowPerc(Scarolina_Table)
+Korea_Table <- xtabs(~infected + group, data = korea)
+rowPerc(Korea_Table)
 ```
-Overall most who recieved the drug did not contract AIDs, but the diffeence was only by 0.04%. 
+Overall most who recieved the drug did not contract AIDs (50.33%). 
+
 
 # Inferential Conclusion 
 
