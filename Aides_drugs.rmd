@@ -1,6 +1,6 @@
 ---
 title: "Aides Tests"
-author: "Dr K"
+author: "McKayla Witt"
 date: "May 24, 2017"
 output: html_document
 ---
@@ -100,6 +100,10 @@ barchartGC(~infected + group, data=korea, type = "percent")
 ```
 Given the barchart, the percentage of poeple who conteracted AIDs and were given the placebo (over 50%) were greater than those who contracted AIDs and were given the drug (around 44%).
 
+# Discussion On Graphical Analysis
+
+The graphs show that the South Carolina drug, demonstrates a small chance of working to prevent AIDs, but when broken down to examine males and females the drug does not seem to prevent AIDs.The Central Africa drug works on males, but not on females and not the population over all. The Korea drug seems to work on males and the over all population, but not specifically on females. 
+
 #Numerical Results
 # South Carolina 
 
@@ -127,7 +131,7 @@ rowPerc(Scarolina_Table)
 ```
 Overall 50.04% of those who did not contracted AIDs where given the real drug, while 49.37% of those who caught AIDs where given the drug.
 
-#Central Africa
+# Central Africa
 
 ##Males
 
@@ -153,7 +157,7 @@ rowPerc(CentralAfrica_Table)
 ```
 Overall about 50% (50.10% to be exact) who recieved the drug did not contract AIDs, but of those who were administered the placebo 49.90% remained free of AIDs. 
 
-#Korea
+# Korea
 
 ##Males
 
@@ -179,10 +183,81 @@ rowPerc(Korea_Table)
 ```
 Overall most who recieved the drug did not contract AIDs (50.33%). 
 
+# Numerical Discussion
 
-# Inferential Conclusion 
+The numerical results reaffirm the inferences aquired from the graphs. In South Carolina the drug does not work on males, females, but works on 50.04% of the overall population. In Central Africa the drug did not work on males, but works on women and overall. In Korea the drug worked extremely well with only roughly 32% contracting AIDs and worked overall preventing 50.33% from contracting AIDs, but poorly on women. 
 
+#Inferential 
 
+#South Carolina
 
+##Males
 
+```{r}
+chisqtestGC(ScarolinaM_Table)
+```
+The P-Value is 0.09, which is less than 0.50, therefore we can reject the Null Hypothesis and cannot assume these results are correct. 
 
+##Females
+
+```{r}
+chisqtestGC(ScarolinaF_Table)
+```
+The P-Value is 0.09, which is more than 0.05, therefore we cannot reject the Null Hypothesis and assume these results are correct. 
+
+##Both
+
+```{r}
+chisqtestGC(Scarolina_Table)
+```
+The P-Value exceeds 0.05 by being 0.89, so we cannot reject the Null Hypothesis, so there may be no difference between the drug and the placebo.
+
+#Central Africa
+
+##Males
+
+```{r}
+chisqtestGC(CentralAfricaM_Table)
+```
+the P-Value is 1 therefore we cannot reject the null hypothesis, so there may be no difference between the drug and the placebo.
+
+##Females
+
+```{r}
+chisqtestGC(CentralAfricaF_Table)
+```
+the P-Value is 0.5 therefore we cannot reject the null hypothesis, so there may be no difference between the drug and the placebo.
+
+##Both
+
+```{r}
+chisqtestGC(CentralAfrica_Table)
+```
+the P-Value is 0.57, therefore we cannot reject the Null Hypothesis, so there may be no difference between the drug and the placebo.
+
+#Korea
+
+##Males
+
+```{r}
+chisqtestGC(KoreaM_Table)
+```
+The P-Value is 0 therefore we reject the Null Hypothesis.
+
+##Females
+
+```{r}
+chisqtestGC(KoreaF_Table)
+```
+the P-Value is less than 0.05 therefore we can reject the Null Hypothesis. 
+
+##Both
+
+```{r}
+chisqtestGC(Korea_Table)
+```
+The P-value is 0.06 therefore, we cannot reject the Null Hypothesis, and the drug may not be effective every time the trial is run. 
+
+#Conclusion
+
+The only drug we can definitively say yields accurate results (that do not have to consider the Null Hypothesis) is the Korea drug, which does not work on females, but does on males. Our data from this sample says that in South Carolina the drug does not work on males, females, but the null hypothesis is not low enough and the drug and the placebo may not be different from each other. This data also shows that in Central Africa the drug did not work on males, but works on women and overall, however the null hypothesis could not be rejected on these results either. Overall I believe the drugs did work differently on each gender. 
